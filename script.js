@@ -13,7 +13,7 @@ function getSearchData() {
         if(searchInput === "") {
             alert("Enter a value");
         } else {
-            var xhr = $.get("http://api.giphy.com/v1/gifs/search?q='" + searchInput + "'&api_key=lGCVXIjnlS5aLwupl2Sjv005dNle3svM&limit=50");
+            var xhr = $.get("http://api.giphy.com/v1/gifs/search?q='" + searchInput + "'&api_key=7Fnnrq03Pnzts6Tg2u9MzA1qefLtmQKu&limit=50");
                 
                 xhr.done(function(response) { 
                 var jiffs = response.data;
@@ -25,7 +25,7 @@ function getSearchData() {
 }
 
 function getTrending() {
-    var xhr = $.get("http://api.giphy.com/v1/gifs/trending?&api_key=lGCVXIjnlS5aLwupl2Sjv005dNle3svM&limit=50");
+    var xhr = $.get("http://api.giphy.com/v1/gifs/trending?&api_key=7Fnnrq03Pnzts6Tg2u9MzA1qefLtmQKu&limit=50");
     xhr.done(function(response) {
         var trendingGiffs = response.data;
         for( var i in trendingGiffs) {
